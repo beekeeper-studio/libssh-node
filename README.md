@@ -43,6 +43,8 @@ npm install libssh-node
 
 ### For Electron
 
+#### Development
+
 Rebuild for your Electron version:
 
 ```bash
@@ -50,6 +52,14 @@ yarn rebuild --runtime=electron --target=31.0.0
 # or
 npm run rebuild -- --runtime=electron --target=31.0.0
 ```
+
+#### Distribution
+
+When packaging your Electron app for distribution, you need to bundle libssh with your application. See the complete guide:
+
+📦 **[Electron Packaging Guide](docs/electron-packaging.md)** - How to bundle libssh with your Electron app
+
+This ensures end users don't need to install libssh separately.
 
 ## Quick Start
 
@@ -203,9 +213,18 @@ console.log(config.hostname, config.port, config.user);
 - `parse(configPath?: string): SSHConfigHost[]` - Parse SSH config file
 - `findHostConfig(hostname: string, configPath?: string): SSHConfigHost | null` - Find host config
 
-## Examples
+## Documentation
 
-See the [examples/](examples/) directory for more examples:
+### Guides
+
+- **[Tunneling Guide](docs/tunneling.md)** - Complete guide to SSH tunneling for database connections
+- **[SSH Agents Guide](docs/agents.md)** - Setting up 1Password, YubiKey, and system SSH agents
+- **[Building Guide](docs/building.md)** - Platform-specific build instructions
+- **[Electron Packaging Guide](docs/electron-packaging.md)** - Bundle libssh with your Electron app
+
+### Examples
+
+See the [examples/](examples/) directory for code examples:
 
 - [basic-connection.ts](examples/basic-connection.ts) - Simple connection
 - [ssh-tunnel.ts](examples/ssh-tunnel.ts) - Database tunnel setup
