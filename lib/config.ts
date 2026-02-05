@@ -116,7 +116,7 @@ export class SSHConfigParser {
       case 'user':
         host.user = value;
         break;
-      case 'identityfile':
+      case 'identityfile': {
         if (!host.identityFile) {
           host.identityFile = [];
         }
@@ -126,6 +126,7 @@ export class SSHConfigParser {
           : value;
         host.identityFile.push(expandedValue);
         break;
+      }
       case 'proxyjump':
         host.proxyJump = value;
         break;

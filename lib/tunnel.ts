@@ -149,7 +149,7 @@ export class SSHTunnel {
    * Set up bidirectional data forwarding between socket and channel
    */
   private setupDataForwarding(channelId: number, channel: SSHChannel, socket: net.Socket): void {
-    let isForwarding = true;
+    const isForwarding = true;
 
     // Socket -> Channel
     socket.on('data', async (data) => {
