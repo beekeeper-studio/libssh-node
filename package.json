@@ -1,0 +1,46 @@
+{
+  "name": "libssh-node",
+  "version": "0.1.0",
+  "description": "Node.js native wrapper for libssh with TypeScript support",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "yarn build:ts",
+    "build:native": "node-gyp rebuild",
+    "build:ts": "tsc",
+    "build:all": "yarn build:native && yarn build:ts",
+    "clean": "node-gyp clean && rm -rf dist",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "rebuild": "yarn clean && yarn build:all"
+  },
+  "keywords": [
+    "ssh",
+    "libssh",
+    "tunnel",
+    "sftp",
+    "native",
+    "node-addon"
+  ],
+  "author": "Beekeeper Studio",
+  "license": "MIT",
+  "dependencies": {
+    "node-addon-api": "^8.0.0"
+  },
+  "devDependencies": {
+    "@types/jest": "^29.5.12",
+    "@types/node": "^20.11.19",
+    "@typescript-eslint/eslint-plugin": "^7.0.1",
+    "@typescript-eslint/parser": "^7.0.1",
+    "eslint": "^8.57.0",
+    "jest": "^29.7.0",
+    "node-gyp": "^10.0.1",
+    "ts-jest": "^29.1.2",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.3"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "gypfile": true
+}

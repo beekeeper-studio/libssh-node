@@ -1,0 +1,21 @@
+node_modules/
+dist/
+build/
+*.node
+*.log
+*.tgz
+.DS_Store
+
+# Test artifacts
+coverage/
+.nyc_output/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Temporary files
+*.tmp
+.cache/
